@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Entry from 'routes';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import 'styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Data from './redux/reducers/root';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Entry />
+    <Provider store={Data.store}>
+      <Entry />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
