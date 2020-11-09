@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import Container from 'layout/Container';
 import 'styles/App.css';
-import Header from 'layout/Header';
+import { connect } from 'react-redux';
 import { listPokemonRequest } from 'redux/reducers/list-pokemon/list-pokemon.api';
+
+import Container from 'layout/Container';
+import Loader from 'components/loader/Loader';
+import Header from 'layout/Header';
 import List from './components/list/List';
 
 function ListPokemon({ listPokemonState }) {
@@ -17,11 +19,9 @@ function ListPokemon({ listPokemonState }) {
     }
   }, []);
 
-  // if (!lisPokemonState.success) {
-  //   return (
-
-  //   );
-  // }
+  if (!listPokemonState.success) {
+    return <Loader />;
+  }
 
   return (
     <Container>

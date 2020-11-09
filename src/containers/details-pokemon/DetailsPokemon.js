@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './style.css';
+import Loader from 'components/loader/Loader';
 import { useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
@@ -25,6 +26,10 @@ function DetailsPokemon({ detailPokemonState }) {
   const renderTypes = (types) => (
     <div className="badge mr-2">{types.type.name}</div>
   );
+
+  if (!detailPokemonState.success) {
+    return <Loader />;
+  }
 
   return (
     <div className="pokemon-detail">

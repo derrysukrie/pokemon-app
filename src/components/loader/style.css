@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion: no-preference) {
+  .loader {
+    /* animation: App-logo-spin infinite 0.5s linear; */
+    animation: App-logo-spin infinite 0.3s linear;
+  }
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
