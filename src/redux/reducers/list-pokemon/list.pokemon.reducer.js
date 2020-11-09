@@ -7,14 +7,21 @@ const defaultState = {
 };
 
 // Create Category
-export const [listPokemonRequest, listPokemonRequestFailure] = [
-  'LIST_REQUEST',
-  'LIST_FAILURE',
-].map(createAction);
+export const [
+  listPokemonRequest,
+  listPokemonSuccess,
+  listPokemonRequestFailure,
+] = ['LIST_REQUEST', 'LIST_SUCCESS', 'LIST_FAILURE'].map(createAction);
 
 export const listPokemonReducer = createReducer(
   {
     [listPokemonRequest]: (state, payload) => {
+      return update(state, {
+        data: { $set: payload },
+        success: { $set: false },
+      });
+    },
+    [listPokemonSuccess]: (state, payload) => {
       return update(state, {
         data: { $set: payload },
         success: { $set: true },

@@ -1,3 +1,3 @@
 export default {
-  listPokemon: 'pokemon',
+  pokemon: 'pokemon',
 };

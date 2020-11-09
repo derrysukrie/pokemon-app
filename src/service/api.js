@@ -22,7 +22,7 @@ function GET(endpoint, param) {
 
 function GETPAGINATION(endpoint, offset) {
   let url = endpoint;
-  url = `${url}?limit=20&offset=${offset}`;
+  url = `${url}?limit=10&offset=${offset}`;
   return api.get(url);
 }
 

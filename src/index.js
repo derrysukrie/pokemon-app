@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import Entry from 'routes';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import Data from './redux/reducers/root';
+
 import 'styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Data from './redux/reducers/root';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>

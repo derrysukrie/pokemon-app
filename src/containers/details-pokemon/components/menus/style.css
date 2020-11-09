@@ -1,0 +1,12 @@
+.abilities {
+  padding: 5px;
+  width: 48%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #FFF;
+  height: 40px;
+  background-color: rgb(33, 212, 153);
+}

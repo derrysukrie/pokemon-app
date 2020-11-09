@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import Container from 'layout/Container';
 import 'styles/App.css';
 import Header from 'layout/Header';
-import { cartDataRequest } from 'redux/reducers/list-pokemon/list-pokemon.api';
+import { listPokemonRequest } from 'redux/reducers/list-pokemon/list-pokemon.api';
 import List from './components/list/List';
 
 function ListPokemon({ listPokemonState }) {
   useEffect(() => {
-    cartDataRequest(10);
+    listPokemonRequest(10);
     const body = document.querySelector('body');
     if (body) {
       body.style.backgroundColor = '#fff';
@@ -16,6 +16,12 @@ function ListPokemon({ listPokemonState }) {
       body.style.backgroundColor = '#fff';
     }
   }, []);
+
+  // if (!lisPokemonState.success) {
+  //   return (
+
+  //   );
+  // }
 
   return (
     <Container>
