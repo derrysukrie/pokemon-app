@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 
 import './style.css';
 import About from './about/About';
-import Moves from './moves/Moves';
+import Moves from './moves/moves';
 
 const { TabPane } = Tabs;
 function Menus({ pokemonPayload }) {
