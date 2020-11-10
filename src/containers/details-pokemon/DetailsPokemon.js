@@ -106,7 +106,7 @@ function DetailsPokemon({ detailPokemonState }) {
       <div className="text-center">
         <ActionButton title="Catch Pokemon!" action={validate} />
       </div>
-      <div className="fixed-bottom" style={{ zIndex: 10 }} id="fixed-width">
+      <div>
         <div className="pokemon-details">
           <Menus pokemonMoves pokemonPayload={detailPokemonState} />
         </div>
