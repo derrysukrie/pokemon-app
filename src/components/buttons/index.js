@@ -6,4 +6,12 @@ const PrimaryButton = ({ title }) => {
   return <button className="primary-button">{title}</button>;
 };
 
-export { PrimaryButton };
+const ActionButton = ({ title, action }) => {
+  return (
+    <button onClick={action} className="action-button">
+      {title}
+    </button>
+  );
+};
+
+export { PrimaryButton, ActionButton };

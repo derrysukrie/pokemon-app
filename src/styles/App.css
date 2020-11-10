@@ -1,7 +1,7 @@
 
 html {
   max-width: 414px;
-  margin: 0 auto;
+  margin: 0 auto; 
   height: 100%;
   background-color: rgb(238, 238, 238);
 }
@@ -42,4 +42,21 @@ body {
 
 .ant-tabs-nav-wrap {
   justify-content: center !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgb(3,172,14) !important;
+}
+
+.ant-tabs-ink-bar {
+  background: rgb(3,172,14) !important
+}
+
+.ant-tabs-tab:hover {
+  color: unset !important;
+}
+
+.ant-btn-primary {
+  background: rgb(3,172,14) !important;
+  border: 0 !important;
 }

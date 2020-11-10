@@ -21,7 +21,7 @@ export const detailPokemonRequest = async (pokemonID) => {
       dispatch(detailPokemonFailure(response.data.message));
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-  return response;
+  return response.data.data;
 };

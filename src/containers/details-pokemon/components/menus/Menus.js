@@ -2,25 +2,23 @@ import React from 'react';
 import { Tabs } from 'antd';
 
 import './style.css';
+import About from './about/About';
+import Moves from './moves/Moves';
 
 const { TabPane } = Tabs;
-function Menus() {
-  function callback(key) {
-    console.log(key);
-  }
-
+function Menus({ pokemonPayload }) {
   return (
     <div className="menus-container">
-      <Tabs defaultActiveKey="1" onChange={callback}>
-        <TabPane tab="Abilities" key="1">
-          Content of Tab Pane 1
+      <Tabs defaultActiveKey="1">
+        <TabPane tab="About" key="1">
+          <About pokemonPayload={pokemonPayload} />
         </TabPane>
         <TabPane tab="Moves" key="2">
-          Content of Tab Pane 2
+          <Moves pokemonPayload={pokemonPayload} />
         </TabPane>
-        <TabPane tab="Location" key="3">
+        {/* <TabPane tab="Location" key="3">
           Content of Tab Pane 3
-        </TabPane>
+        </TabPane> */}
       </Tabs>
     </div>
   );

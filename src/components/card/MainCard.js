@@ -16,7 +16,7 @@ function MainCard({ list }) {
           <span>{list.name}</span>
         </div>
         <div className="ml-auto">
-          <PrimaryButton title="Catch!" />
+          <PrimaryButton title="Details" />
         </div>
       </div>
     </div>

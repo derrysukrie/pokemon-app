@@ -19,12 +19,12 @@
   padding: 10px;
   text-transform: capitalize;
   border-radius: 5px;
-  color: #FFF;
-  background-color:rgb(33, 212, 153);
+  color: rgb(3,172,14) ;
+  background-color:rgb(232, 255, 234);
 }
 
 .pokemon-details {
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.1);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 20px;
