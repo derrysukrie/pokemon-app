@@ -6,6 +6,7 @@ const ListPokemon = lazy(() => import('containers/list-pokemon/ListPokemon'));
 const DetailsPokemon = lazy(() =>
   import('containers/details-pokemon/DetailsPokemon'),
 );
+const MyPokemon = lazy(() => import('containers/my-pokemon/MyPokemon'));
 
 const Entry = () => {
   return (
@@ -13,11 +14,8 @@ const Entry = () => {
       <Suspense fallback="">
         <Switch>
           <InitialRoute exact path="/" component={ListPokemon} />
-          <InitialRoute
-            exact
-            path="/details-pokemon"
-            component={DetailsPokemon}
-          />
+          <InitialRoute path="/details-pokemon" component={DetailsPokemon} />
+          <InitialRoute path="/my-pokemon" component={MyPokemon} />
         </Switch>
       </Suspense>
     </BrowserRouter>

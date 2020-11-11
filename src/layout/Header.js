@@ -1,7 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import 'styles/App.css';
 
 function Header() {
+  const history = useHistory();
+
   return (
     <div className="d-flex justify-content-between align-items-center">
       <div>
@@ -13,7 +16,13 @@ function Header() {
 
       <div>
         <div className="App">
-          <header className="App-header">
+          <header
+            className="App-header"
+            onClick={() => history.push('/my-pokemon')}
+            tabIndex="0"
+            onKeyPress={null}
+            role="button"
+          >
             <img src="/pokeball.svg" className="App-logo" alt="logo" />
           </header>
         </div>

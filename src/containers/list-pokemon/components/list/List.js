@@ -6,19 +6,22 @@ import './style.css';
 import MainCard from 'components/card/MainCard';
 
 function List({ listPokemon }) {
+  const myPokemon = JSON.parse(localStorage.getItem('pokemon')) || [];
+
   const history = useHistory();
   const payload = listPokemon?.data?.results ?? [];
 
   const toPokemonDetail = (list) => {
     const pokemonID = list.url.split('/');
-    history.push(`/details-pokemon?pokemonID=${pokemonID[6]}`, {
-      name: list.name,
-    });
+    history.push(`/details-pokemon?pokemonID=${pokemonID[6]}`);
   };
 
   return (
     <div className="list-pokemon">
-      <h6>Pokelist</h6>
+      <div className="d-flex justify-content-between align-items-center">
+        <h6>Pokelist</h6>
+        <h6>Owned #{myPokemon.length}</h6>
+      </div>
       <div className="mt-3">
         {payload.map((list) => (
           <div key={list.name} className="pb-3">

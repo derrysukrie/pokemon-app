@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import { Modal, Input, message } from 'antd';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 
@@ -15,6 +15,8 @@ function DetailsPokemon({ detailPokemonState }) {
   const myPokemon = JSON.parse(localStorage.getItem('pokemon')) || [];
 
   const location = useLocation();
+  const history = useHistory();
+
   const parsed = queryString.parse(location.search);
 
   const [isShowModal, setShowModal] = useState(false);
@@ -88,6 +90,20 @@ function DetailsPokemon({ detailPokemonState }) {
 
   return (
     <div className="pokemon-detail">
+      <div
+        className="mb-4"
+        tabIndex="0"
+        onKeyPress={null}
+        role="button"
+        onClick={() => history.goBack()}
+      >
+        <img
+          style={{ cursor: 'pointer' }}
+          src="/left-arrow.svg"
+          width="25"
+          alt="arrow"
+        />
+      </div>
       <div className="d-flex justify-content-between pokemon-name">
         <span>{pokemonName.name}</span>
         <span>#{detailPokemonState.data.order}</span>
@@ -107,7 +123,7 @@ function DetailsPokemon({ detailPokemonState }) {
         <ActionButton title="Catch Pokemon!" action={validate} />
       </div>
       <div>
-        <div className="pokemon-details">
+        <div className="pokemon-details fixed-bottom" id="fixed-width">
           <Menus pokemonMoves pokemonPayload={detailPokemonState} />
         </div>
       </div>

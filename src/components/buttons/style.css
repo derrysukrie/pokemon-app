@@ -1,11 +1,13 @@
 .primary-button {
-  background-color: #ea4c89;
+  background-color: rgb(250, 89, 29);
   border: 0;
   color: #fff;
   font-size: 10px;
   border-radius: 4px;
+  font-weight: 600;
   outline: none !important;
   margin: 2px;
+  padding: 5px;
 }
 
 .action-button {
@@ -17,4 +19,14 @@
   background: rgb(250, 89, 29)
     radial-gradient(circle, transparent 1%, rgb(250, 89, 29) 1%) repeat scroll
     center center / 15000%;
+}
+
+.release-button {
+  padding: 6px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgb(250, 89, 29);
+  border-radius: 8px;
+  font-size: 10px;
 }

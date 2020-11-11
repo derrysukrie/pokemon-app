@@ -14,4 +14,12 @@ const ActionButton = ({ title, action }) => {
   );
 };
 
-export { PrimaryButton, ActionButton };
+const ReleaseButton = ({ title, action }) => {
+  return (
+    <button onClick={action} className="release-button">
+      {title}
+    </button>
+  );
+};
+
+export { PrimaryButton, ActionButton, ReleaseButton };

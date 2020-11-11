@@ -9,7 +9,7 @@ function Moves({ pokemonPayload }) {
   return (
     <div className="d-flex flex-wrap">
       {slicedMoves.map((movesData) => (
-        <div className="pr-2 mt-2">
+        <div key={movesData.move.name} className="pr-2 mt-2">
           <Badge>{movesData.move.name}</Badge>
         </div>
       ))}
