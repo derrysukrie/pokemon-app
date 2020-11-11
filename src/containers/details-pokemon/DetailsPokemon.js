@@ -123,7 +123,7 @@ function DetailsPokemon({ detailPokemonState }) {
         <ActionButton title="Catch Pokemon!" action={validate} />
       </div>
       <div>
-        <div className="pokemon-details fixed-bottom" id="fixed-width">
+        <div className="pokemon-details">
           <Menus pokemonMoves pokemonPayload={detailPokemonState} />
         </div>
       </div>
